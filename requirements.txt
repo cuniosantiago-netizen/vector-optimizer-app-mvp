@@ -2,3 +2,5 @@ PySide6
 ezdxf
 shapely
 pyclipper
+numpy
+scipy
