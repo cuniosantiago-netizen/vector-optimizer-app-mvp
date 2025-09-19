@@ -1,29 +1,48 @@
-# Nesting App MVP
+🪵 Nesting App v2
+Aplicación de escritorio para optimizar el espacio de trabajo de cortes CNC a partir de archivos DXF.
+Soporta:
+- Capas DXF (importación y exportación)
+- Rotación automática para mejor aprovechamiento
+- Reporte automático en TXT con métricas de optimización
 
-Este es un **MVP** para una aplicación de escritorio que permite:
-- Importar elementos en formato **DXF**
-- Acomodarlos automáticamente en un espacio de trabajo
-- Visualizar métricas de aprovechamiento del espacio
-- Exportar el resultado nuevamente en formato **DXF**
+🚀 Instalación Rápida
+1. Clonar o descargar este repositorio
+git clone https://github.com/tu-usuario/nesting-app.git
+cd nesting-app
 
-La app está pensada para optimizar cortes en CNC y probar algoritmos de nesting 2D.
+2. Instalar dependencias
+Asegúrate de tener Python 3.9+ instalado.
+pip install -r requirements.txt
 
----
+3. Requisitos del archivo requirements.txt
+PySide6
+ezdxf
+shapely
 
-## Probar la aplicación en la nube (sin instalar nada)
+▶️ Uso
+1. Ejecutar la app:
+python nesting_app_v2.py
 
-1. **Abre este repositorio en GitHub**  
-2. Haz clic en el botón verde **< > Code**  
-3. Ve a la pestaña **Codespaces**  
-4. Haz clic en **Create codespace on main**  
-5. Espera a que cargue el entorno (toma 1-2 min)
+2. Cargar un archivo DXF
+Cada figura puede estar en una capa diferente.
+Las capas se mantendrán en el DXF optimizado.
 
-Cuando termine:
-- Abre la pestaña **PORTS**  
-- Busca el puerto **6080** con el nombre *Escritorio Remoto (GUI)*  
-- Haz clic en el ícono 🌐 para abrir el escritorio virtual  
+3. Optimizar
+Ajusta automáticamente las posiciones para maximizar el uso del espacio.
+Rota las figuras cuando sea necesario.
+Mantiene la distancia mínima entre elementos.
 
-En el escritorio virtual:  
-```bash
-cd /workspaces/nesting-app
-python3 nesting_app.py
+4. Resultados
+Se genera un DXF optimizado llamado optimized_layout.dxf
+Se crea un reporte automático en la carpeta reports/ con métricas:
+% de aprovechamiento
+Tiempo de procesamiento
+Figuras colocadas
+
+📂 Estructura del proyecto
+nesting-app/
+│
+├── nesting_app_v2.py        # Código principal
+├── requirements.txt         # Dependencias
+├── README.md                # Este archivo
+└── reports/                 # Se crea automáticamente para guardar reportes
