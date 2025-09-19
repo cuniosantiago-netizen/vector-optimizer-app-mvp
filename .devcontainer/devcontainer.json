@@ -1,7 +1,10 @@
 {
+  "name": "Nesting App Dev",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
-    "ghcr.io/devcontainers/features/desktop-lite:1": {}
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "VNC_PASSWORD": "123456"
+    }
   },
   "forwardPorts": [6080],
   "portsAttributes": {
@@ -9,5 +12,13 @@
       "label": "Escritorio Remoto (GUI)"
     }
   },
-  "postCreateCommand": "pip install -r requirements.txt"
+  "postCreateCommand": "pip install -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  }
 }
