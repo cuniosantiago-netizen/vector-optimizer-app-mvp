@@ -1,6 +1,5 @@
-PySide6
+PyQt5
 ezdxf
 shapely
 pyclipper
-numpy
-scipy
+reportlab
